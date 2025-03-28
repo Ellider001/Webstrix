@@ -1,4 +1,4 @@
-
+ // Webstrix
 
 (function() {
   "use strict";
@@ -207,3 +207,10 @@
 
 
 console.log(window.emailjs);
+
+
+// Espera a que la página y todos sus recursos (como imágenes) se hayan cargado
+window.addEventListener("load", function () {
+  // Elimina la clase 'show' para ocultar el spinner
+  document.getElementById("spinner").classList.remove("show");
+});

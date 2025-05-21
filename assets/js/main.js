@@ -85,18 +85,19 @@
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
+ /**
+ * Animation on scroll function and init
+ */
+function aosInit() {
+  AOS.init({
+    offset: -200, // ← se activa cuando la parte baja de la pantalla toca el elemento
+    duration: 600,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+}
+window.addEventListener('load', aosInit);
 
   /**
    * Init swiper sliders
